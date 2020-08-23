@@ -98,7 +98,11 @@ Here's a demo of that [`demos/custom/src/gatsby-theme-auth0/components/callback.
 
 ## Custom Domains and Third Party Cookies
 
-A number of modern browsers have started blocking third party cookies by default. This means that in order to implement Auth0 Universal Login you'll either need to use a custom domain. Once setup in Auth0, set `tenant` to your unique tenant slug and set `tokenIssuer` to the full custom login URL.
+A number of modern browsers have started blocking third party cookies by default. This means that in order to implement Auth0 Universal Login you'll either need to use a custom domain. Once setup in Auth0, set:
+
+- `tenant` to your unique tenant slug.
+- `domain` to your custom login URL eg. mydomain.com
+- `tokenIssuer` to the full custom login URL eg. https://mydomain.com/.
 
 ## Demos
 

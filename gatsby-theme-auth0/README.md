@@ -78,6 +78,8 @@ export default () => {
 | `audience`     |                          | `false`  | Configure Auth0 `Audience`      |
 | `responseType` | `"token id_token"`       | `false`  | Configure Auth0 `Response Type` |
 | `scope`        | `"openid email profile"` | `false`  | Configure Auth0 `Scope`         |
+| `tenant`       |                          | `false`  | Configure Auth0 `Tenant`        |
+| `tokenIssuer`  |                          | `false`  | Configure Auth0 `Token Issuer`  |
 | `callbackPath` | `"/auth/callback"`       | `false`  | Change callback URL path        |
 
 ## Shadowing
@@ -93,6 +95,10 @@ src/gatsby-theme-auth0/components/callback.js
 ```
 
 Here's a demo of that [`demos/custom/src/gatsby-theme-auth0/components/callback.js`](https://github.com/epilande/gatsby-theme-auth0/blob/master/demos/custom/src/gatsby-theme-auth0/components/callback.tsx)
+
+## Custom Domains and Third Party Cookies
+
+A number of modern browsers have started blocking third party cookies by default. This means that in order to implement Auth0 Universal Login you'll either need to use a custom domain. Once setup in Auth0, set `tenant` to your unique tenant slug and set `tokenIssuer` to the full custom login URL.
 
 ## Demos
 

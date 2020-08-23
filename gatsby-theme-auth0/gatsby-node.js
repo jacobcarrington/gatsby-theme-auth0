@@ -16,6 +16,8 @@ exports.onCreateWebpackConfig = ({ plugins, actions }, options) => {
     audience,
     responseType,
     scope,
+    tenent,
+    tokenIssuer,
   } = options;
 
   checkRequiredCreds({ domain, clientID, redirectUri });
@@ -30,6 +32,8 @@ exports.onCreateWebpackConfig = ({ plugins, actions }, options) => {
           AUTH0_AUDIENCE: JSON.stringify(audience),
           AUTH0_RESPONSE_TYPE: JSON.stringify(responseType),
           AUTH0_SCOPE: JSON.stringify(scope),
+          AUTH0_TENANT: JSON.stringify(tenant),
+          AUTH0_TOKEN_ISSUER: JSON.stringify(tokenIssuer),
         },
       }),
     ],

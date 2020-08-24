@@ -16,7 +16,7 @@ exports.onCreateWebpackConfig = ({ plugins, actions }, options) => {
     audience,
     responseType,
     scope,
-    tenent,
+    tenant,
     tokenIssuer,
   } = options;
 

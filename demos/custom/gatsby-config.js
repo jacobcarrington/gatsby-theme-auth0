@@ -21,6 +21,8 @@ module.exports = {
         responseType: "token id_token",
         scope: "openid profile",
         callbackPath: "/awesome-callback",
+        tenant: process.env.AUTH0_TENANT,
+        tokenIssuer: `https://${process.env.DOMAIN}/`,
       },
     },
   ],
